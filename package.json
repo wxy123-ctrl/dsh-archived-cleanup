@@ -1,0 +1,44 @@
+{
+  "name": "dsh-archived-cleanup",
+  "version": "0.6.0",
+  "type": "module",
+  "description": "DSH 归档清理：在设置页批量选择归档会话并永久删除其全部本地痕迹（日志、缓存、附件、临时文件等），删除后自动清扫全局孤儿文件。",
+  "license": "MIT",
+  "author": "wxy123-ctrl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxy123-ctrl/dsh-archived-cleanup.git"
+  },
+  "homepage": "https://github.com/wxy123-ctrl/dsh-archived-cleanup#readme",
+  "bugs": "https://github.com/wxy123-ctrl/dsh-archived-cleanup/issues",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cleanup",
+    "session-management",
+    "privacy"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    }
+  }
+}
