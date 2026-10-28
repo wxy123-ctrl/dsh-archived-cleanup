@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Archived Cleanup",
+    "description": "Bulk-delete archived DSH sessions together with all of their local traces (logs, caches, attachments, temp files); an automatic global orphan sweep runs afterwards."
+  }
+}
