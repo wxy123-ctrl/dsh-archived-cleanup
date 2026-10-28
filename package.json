@@ -1,8 +1,17 @@
 {
   "name": "dsh-archived-cleanup",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "type": "module",
   "description": "DSH 归档清理：在设置页批量选择归档会话并永久删除其全部本地痕迹（日志、缓存、附件、临时文件等），删除后自动清扫全局孤儿文件。",
+  "icon": "./icon.svg",
+  "files": [
+    "index.js",
+    "client.js",
+    "selftest.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
   "license": "MIT",
   "author": "wxy123-ctrl",
   "repository": {
